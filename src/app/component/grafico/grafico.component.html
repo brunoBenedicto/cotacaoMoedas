@@ -1,0 +1,21 @@
+<div class="container mb-5">
+  <canvas #chartCanvas></canvas>
+</div>
+<div class="container">
+  <table *ngIf="dados.length > 0" class="table table-sm table-striped table-hover">
+      <thead class="table-success">
+        <tr>
+        <th>Data e Hora</th>
+        <th>Cotação de Compra</th>
+        <th>Cotação de Venda</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dado of dados">
+        <td>{{ dado.dataHoraCotacao }}</td>
+        <td>{{ dado.cotacaoCompra }}</td>
+        <td>{{ dado.cotacaoVenda }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
